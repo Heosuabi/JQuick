@@ -31,6 +31,13 @@
   </dependencies>
   
   <build>
+    <extensions>
+      <extension>
+        <groupId>org.apache.maven.wagon</groupId>
+        <artifactId>wagon-ftp</artifactId>
+        <version>2.2</version>
+      </extension>
+    </extensions>
     <plugins>
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
@@ -72,6 +79,24 @@
           </execution>
         </executions>
       </plugin>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-release-plugin</artifactId>
+        <version>2.2.2</version>
+      </plugin>
     </plugins>
   </build>
+
+  <scm>
+    <url>scm:git:https://github.com/Mareck/JQuick</url>
+    <connection>scm:git:git://github.com/Mareck/JQuick.git</connection>
+    <developerConnection>scm:git:git@github.com:Mareck/JQuick.git</developerConnection>
+  </scm>
+
+  <distributionManagement>
+    <repository>
+      <id>scilled-ftp</id>
+      <url>ftp://scilled.eu</url>
+    </repository>
+  </distributionManagement>
 </project>

@@ -5,6 +5,9 @@ import java.lang.reflect.Proxy;
 import java.util.Map;
 import java.util.Properties;
 
+/**
+ * <p>JQuick "wraps" an user defined interface and backs it up with a Map or Properties.</p>
+ */
 public final class JQuick {
 
     private JQuick() {
