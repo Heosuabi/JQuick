@@ -10,8 +10,8 @@ JQuick tries to encapsulates this manually handling of property values.
 
 Usage
 -----
-The first step to successfully use JQuick is to define an interface with setters and getters for the properties.
-As example you could create an interface named WindowProperties which gets and sets the last properties of a window:
+The first step to use JQuick is to define an interface with setters and getters for the properties.
+For example you could create an interface named WindowProperties which gets and sets the last properties of a window:
 width, height and last location.
 
 Each setter and getter has to be annotated with the `@Config` annotation. The value of the annotation is the key inside
@@ -31,7 +31,7 @@ JQuick uses reflection and creates a `Proxy` for the interface backed by the `Pr
 It uses Parsers to convert the property value string to the resulting type and back again.
 JQuick is able to automatically parse most of the primitive types and String.
 
-When you need to parse your property value to an type of your own, you can do it. Just define your own parser and set
+When you need to parse your property value to a type of your own, you can do it. Just define your own parser and set
 the parser with the `@Config` annotation.
 
 ### Writing an own parser?
