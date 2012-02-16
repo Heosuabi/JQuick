@@ -7,9 +7,21 @@
   <parent>
     <groupId>eu.scilled</groupId>
     <artifactId>jquick-parent</artifactId>
-    <version>0.1.1-SNAPSHOT</version>
+    <version>0.2.0-SNAPSHOT</version>
   </parent>
   
   <artifactId>jquick-examples</artifactId>
   <name>JQuick Examples</name>
+
+  <dependencies>
+    <dependency>
+      <groupId>eu.scilled</groupId>
+      <artifactId>jquick-api</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>com.google.inject</groupId>
+      <artifactId>guice</artifactId>
+      <version>3.0</version>
+    </dependency>
+  </dependencies>
 </project>

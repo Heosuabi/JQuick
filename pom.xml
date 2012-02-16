@@ -6,7 +6,7 @@
   
   <groupId>eu.scilled</groupId>
   <artifactId>jquick-parent</artifactId>
-  <version>0.1.1-SNAPSHOT</version>
+  <version>0.2.0-SNAPSHOT</version>
   <packaging>pom</packaging>
   <name>JQuick Parent</name>
   
@@ -29,6 +29,16 @@
       <scope>test</scope>
     </dependency>
   </dependencies>
+
+  <dependencyManagement>
+    <dependencies>
+      <dependency>
+        <groupId>eu.scilled</groupId>
+        <artifactId>jquick-api</artifactId>
+        <version>${project.version}</version>
+      </dependency>
+    </dependencies>
+  </dependencyManagement>
   
   <build>
     <plugins>
