@@ -1,13 +1,6 @@
 package eu.scilled.jquick;
 
-import eu.scilled.jquick.parser.BooleanParser;
-import eu.scilled.jquick.parser.DoubleParser;
-import eu.scilled.jquick.parser.FloatParser;
-import eu.scilled.jquick.parser.IntParser;
-import eu.scilled.jquick.parser.LongParser;
-import eu.scilled.jquick.parser.NullParser;
-import eu.scilled.jquick.parser.Parser;
-import eu.scilled.jquick.parser.StringParser;
+import eu.scilled.jquick.parser.*;
 
 import java.lang.reflect.InvocationHandler;
 import java.lang.reflect.Method;
@@ -82,6 +75,12 @@ class MapInvocationHandler implements InvocationHandler {
             return getParserInstance(LongParser.class);
         } else if (classType == Boolean.TYPE) {
             return getParserInstance(BooleanParser.class);
+        } else if (classType == Character.TYPE) {
+            return getParserInstance(CharParser.class);
+        } else if (classType == Short.TYPE) {
+            return getParserInstance(ShortParser.class);
+        } else if (classType == Byte.TYPE) {
+            return getParserInstance(ByteParser.class);
         }
         return NULL_PARSER;
     }
