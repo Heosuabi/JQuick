@@ -2,8 +2,10 @@
 .classpath
 .project
 .idea
+.gradle
 *.iml
 *.ipr
 *.iws
 *~
 target/
+build/
